@@ -1,4 +1,7 @@
 {
+    "textui": {
+        "open_shop": "**[E]** to open the shop"
+    },
     "clothes": {
         "pants": "Pants"
     }

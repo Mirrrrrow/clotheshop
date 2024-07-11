@@ -32,6 +32,7 @@ server_scripts {
 }
 
 files {
+    'src/modules/**/client.lua',
     'data/**/*.lua',
     'locales/*.json'
 }

@@ -44,3 +44,5 @@ function Client.spawnPed(model, position, animation)
 
     return entity
 end
+
+require 'src.modules.shops.client'
