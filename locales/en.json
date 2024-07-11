@@ -1,8 +1,16 @@
 {
-    "textui": {
-        "open_shop": "**[E]** to open the shop"
-    },
-    "clothes": {
-        "pants": "Pants"
+  "textui": {
+    "open_shop": "**[E]** to open the shop"
+  },
+  "target": {
+    "open_shop": "Open shop"
+  },
+  "clothes": {
+    "pants": "Pants"
+  },
+  "menus": {
+    "shop": {
+      "title": "Laden (%s)"
     }
+  }
 }

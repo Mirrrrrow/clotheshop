@@ -1,4 +1,7 @@
 local TEXTUI_TEXT <const> = locale('textui.open_shop')
+
+local openClothingShop = Menus.showClothingShop
+
 ---@param point CPoint
 local function onEnterShop(point)
     if point.entity then return end
@@ -11,7 +14,11 @@ local function onEnterShop(point)
 
     if Config.oxTarget then
         exports.ox_target:addLocalEntity(point.entity, {
-            label = 'Wonderful resource'
+            label = locale('target.open_shop'),
+            icon = 'fas fa-tshirt',
+            onSelect = function()
+                openClothingShop(point.shop)
+            end
         })
     end
 end
@@ -40,6 +47,10 @@ local function nearbyShop(point)
         if not lib.isTextUIOpen() then
             lib.showTextUI(TEXTUI_TEXT)
         end
+
+        if IsControlJustReleased(0, 38) then
+            openClothingShop(point.shop)
+        end
     else
         local isOpen, currentText = lib.isTextUIOpen()
         if isOpen and currentText == TEXTUI_TEXT then
@@ -57,6 +68,7 @@ for index, shop in pairs(lib.load('data.shops') --[[@as table<number, Shop>]]) d
     local ped, marker = shop.ped, shop.marker
     lib.points.new({
         shopId = index,
+        shop = shop,
         coords = shop.coords,
         distance = ped and 60 or 25,
         marker = marker and lib.marker.new({

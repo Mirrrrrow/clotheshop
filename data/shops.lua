@@ -17,6 +17,7 @@ return {
                 name = 'WORLD_HUMAN_GUARD_STAND'
             }
         },
+        products = {}
         -- marker = {
         --     type = 1,
         --     width = 0.8,

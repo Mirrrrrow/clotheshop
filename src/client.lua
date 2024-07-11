@@ -45,4 +45,5 @@ function Client.spawnPed(model, position, animation)
     return entity
 end
 
+Menus = require 'src.modules.menus.client'
 require 'src.modules.shops.client'
