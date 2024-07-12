@@ -1,6 +1,9 @@
 local TEXTUI_TEXT <const> = locale('textui.open_shop')
 
-local openClothingShop = Menus.showClothingShop
+---@param shop Shop
+local openClothingShop = function(shop)
+    print('You opened ' .. shop.label .. ' shop')
+end
 
 ---@param point CPoint
 local function onEnterShop(point)

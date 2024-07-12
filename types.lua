@@ -10,3 +10,4 @@
 ---@field blip Blip?
 ---@field ped { heading: number, model: string, animation: PedAnimation? }?
 ---@field marker Marker?
+---@field products table<string, string[]>
